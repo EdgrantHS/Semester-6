@@ -3,15 +3,22 @@
 % Untuk menambahkan gambar
 \usepackage{geometry} % Untuk mengatur margin
 \usepackage{float}    % Untuk mengontrol posisi gambar
+% \renewcommand{\baselinestretch}{1.5} 
 
 % Mengatur ukuran kertas dan margin
 \geometry{
     a4paper,
     left=2cm,
     right=2cm,
-    top=1cm,
-    bottom=1cm
+    top=3cm,
+    bottom=3cm
 }
+
+% Add the titling package to control title spacing
+\usepackage{titling}
+
+% Adjust the vertical space above the title (make it smaller)
+\setlength{\droptitle}{-2cm} % Adjust the value as needed
 
 \begin{document}
 
@@ -33,6 +40,7 @@
     2206059446
 }
 
+
 \maketitle
 
 Kecerdasan buatan (artificial intelligence) adalah implementasi dari statistika untuk melakukan pemograman komputer tanpa harus mengimplementasikan algoritma secara explisit. Kecerdasan buatan dapat digunakan untuk merancang algoritma yang mampu belajar dari data dan melakukan prediksi atau pengambilan keputusan secara otomatis. Beberapa tipe algoritma kecerdasan buatan yang umum digunakan antara lain regresi, klasifikasi, dan clustering.
@@ -49,14 +57,18 @@ Kecerdasan buatan (artificial intelligence) adalah implementasi dari statistika 
 
 \section*{2. Penjelasan Generative AI dan perbedaannya dengan 3 Algoritma Sebelumnya}
 
-Generative AI adalah sejenis kecerdasan buatan yang memiliki kemampuan untuk menciptakan konten baru berdasarkan keinginan pengguna. Konten yang dihasilkan oleh Generative AI sendiri dapat bervariasi dari bentuk teks, gambar, audio, dan video. Beberapa contoh Generative AI yang tersedia antara lain:
+Generative AI adalah sejenis kecerdasan buatan yang memiliki kemampuan untuk menciptakan konten baru berdasarkan keinginan pengguna. Konten yang dihasilkan oleh Generative AI sendiri dapat bervariasi dari bentuk teks, gambar, audio, dan video. Selain itu, Generative AI menggunakan model tersendiri, seperti GAN (Generative Adversarial Networks) atau Transformer untuk menghasilkan konten yang mirip dengan data yang ada. Beberapa contoh Generative AI yang tersedia antara lain:
 
-1. ChatGPT, Deep Seek, Gemini untuk menghasilkan konten teks,
-2. Stable Diffussion untuk menghasilkan konten gambar,
-3. Speechify untuk menghasilkan konten audio, dan
-4. Sora untuk menghasilkan konten video
+\begin{enumerate}
+    \item ChatGPT, Deep Seek, Gemini untuk menghasilkan konten teks,
+    \item Stable Diffussion untuk menghasilkan konten gambar,
+    \item Speechify untuk menghasilkan konten audio, dan
+    \item Sora untuk menghasilkan konten video
+\end{enumerate}
 
+Perbedaan utama antara Generative AI dan algoritma Machine Learning klasik (seperti regresi, klasifikasi, dan clustering) terletak pada tujuan dan cara kerjanya. Algoritma klasik biasanya digunakan untuk tugas prediksi atau pengelompokan berdasarkan data yang ada. Sebagai contoh, model regresi biasa digunakan untuk memprediksi nilai rumah berdasarkan fitur-fitur tertentu, sedangkan model klasifikasi biasa digunakan untuk mengelompokkan email sebagai spam atau bukan.
 
+Di sisi lain, Generative AI mampu digunakan untuk menciptakan data baru tanpa adanya batasan pada topik-topik tertentu saja. Hal ini membuat Generative AI sangat populer karena fleksibilitas dalam penggunaannya. Akan tetapi, dibalik kelebihan dari Generative AI tersebut, terdapat faktor-faktor yang perlu menjadi konsiderasi, seperti salah satunya adalah akurasi jawaban yang dihasilkan. Algoritma klasik cenderung lebih akurat dalam tugas-tugas spesifik karena mereka dirancang untuk fokus pada data yang terbatas dan terstruktur. Sehingga, meskipun Generative AI sedang berkembang pesat, algoritma klasik seperti regresi, klasifikasi, dan clustering masih sangat berguna dalam situasi di mana akurasi menjadi prioritas utama.  
 
 \section*{3. Penggunaan Algoritma Kecerdasan Buatan}
 
@@ -71,10 +83,6 @@ Algoritma kecerdasan buatan seperti regresi, klasifikasi, dan clustering memilik
 
 \end{itemize}
 
-\vspace{\vfill}
-
-\vspace{1cm}
-
 \section*{Referensi}
 
 \begin{itemize}
@@ -84,7 +92,7 @@ Algoritma kecerdasan buatan seperti regresi, klasifikasi, dan clustering memilik
 
     \item What is artificial intelligence (AI)? | Google Cloud. (n.d.). Google Cloud. \\ https://cloud.google.com/learn/what-is-artificial-intelligence
 
-    \item \text{Blue1Brown. (n.d.). But what is a neural network? | Deep learning chapter 1 [Video]. \\ https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
+    \item 3Blue1Brown. (2024, November 20). Large Language Models explained briefly | Deep learning chapter 1 [Video]. \\ https://www.youtube.com/watch?v=LPZh9BOjkQs    
     
 \end{itemize}
 
