@@ -55,8 +55,26 @@ Safety equipment akan membantu mengurangi kecelakaan. Walaupun perlu pengeluaran
 - Pekerja kontrak/titak tetap
 - Supplier
 
-## Undang undang
+### Undang undang
 
 - UU No. 1 1970 tentang Keselamatan Kerja
 - Permenaker...
 - Kep Dirjen...
+
+## Kuliah Kedua (Week 2)
+
+### Tugas kedua: 
+
+- Foto dengan background tulisan Veritas, Probitas, Iustitia
+- Tulis apakah negara dalam keadaan sedang baik-baik saja atau tidak
+- Veritas Probitas Iustitia, Kebenaran Kejujuran Keadilan Artinya apa
+- Seharusnya Kejujuran terlebih dahulu karena kejujuran jika dipentingakan akan membawa keadilan dan kebenaran. Jika Kebenaran pertama, semua orang akan berusaha untuk mendapatkan kebenaran, dan akan mengakibatkan konflik.
+- Tidak bisa bertindak adil jika tidak mengetahui kebenaran, tidak bisa mengetahui kebenaran jika tidak jujur. (Tugas 2 beri contoh terhadap pernyataan ini, orang mengutamakan kebenaran dan akhirnya konflik)
+- Apa yang akan lakukan untuk selama kehidupan mahasiswa dan masyarakat dengan melandaskan pada Veritas, Probitas, Iustitia
+
+### Alat Keselamatan
+
+- Alat yg digunakan sebelum kecelakaan adalah untuk mengurangi probabilitas kecelakaan (Contoh, kaca spion)
+- Alat yg digunakan setelah kecelakaan adalah untuk mengurangi konsekuensi kecelakaan (Contoh, helm)
+
+> Risk = Probability x Consequence
