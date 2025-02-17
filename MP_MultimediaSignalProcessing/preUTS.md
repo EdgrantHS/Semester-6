@@ -1,5 +1,6 @@
 # ML - Pemrosesan Sinyal Multimedia
 
+
 ---
 
 ## Kuliah Perdana (Week 1)
@@ -17,3 +18,11 @@
 
 - Analog: Film, vinyl, analog TV, analog phone
 - Digital: CD, DVD, Digital TV, Digital Phone
+
+## Week 2
+
+Online
+
+## Week 3
+
+Sepertinya saya tidak akan catat materi kuliahnya, informasi ada di ppt
