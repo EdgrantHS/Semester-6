@@ -78,3 +78,56 @@ Safety equipment akan membantu mengurangi kecelakaan. Walaupun perlu pengeluaran
 - Alat yg digunakan setelah kecelakaan adalah untuk mengurangi konsekuensi kecelakaan (Contoh, helm)
 
 > Risk = Probability x Consequence
+
+## Safety Risk Management Cycle (Week 3)
+
+- Pemahaman sistem
+- Identifikasi bahaya
+  - Bahaya apa saja
+  - Paling mudah menggunakan check list
+  - Contoh: bahaya naik motor adalah jatuh
+- Penilaian risiko (Probabilitas x Konsekuensi)
+- Kriterio management penerimaan risiko (risk matrix)
+- Accaptable risk -> Monitoring
+- Tidak accaptable risk -> Mitigation (Avoidence, retention, transfer)
+- Risk Treatment, PSM (Process Safety Management) SMK3LL, ISR5
+- Baseline Assessment
+
+> Probabilitas: Jumlah kejadian per satuan waktu (pada waktu tertentu)
+
+### Pengukuran Severity
+
+- Risk matrix
+
+### Orang
+
+- 5: fatality
+- 4: major injury
+- 3: minor injury
+- 2: first aid
+- 1: near miss
+
+### Enviroment
+
+- 5: 200 barrel (oil and gass industry)
+
+### Asset (Uang)
+
+Tergantung context
+
+### Reputation
+
+-
+
+### PEAR
+
+Severity Assessment
+
+- P: People
+- E: Environment
+- A: Asset
+- R: Reputation
+
+> Probability kecelakaan motor hanya 1, dia jatuh, tetapi Severity bisa banyak (PEAR)
+
+> Major Accident Hazzard (MAH): Severity 4 ke atas, tidak peduli probabilitasnya
