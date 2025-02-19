@@ -61,6 +61,8 @@ Safety equipment akan membantu mengurangi kecelakaan. Walaupun perlu pengeluaran
 - Permenaker...
 - Kep Dirjen...
 
+> PP 50 2012 tentang K3 (Keselamatan dan Kesehatan Kerja)
+
 ## Kuliah Kedua (Week 2)
 
 ### Tugas kedua: 
@@ -89,9 +91,10 @@ Safety equipment akan membantu mengurangi kecelakaan. Walaupun perlu pengeluaran
 - Penilaian risiko (Probabilitas x Konsekuensi)
 - Kriterio management penerimaan risiko (risk matrix)
 - Accaptable risk -> Monitoring
-- Tidak accaptable risk -> Mitigation (Avoidence, retention, transfer)
+- Tidak accaptable risk -> Mitigation (Avoidence, retention, transfer (asuransi))
 - Risk Treatment, PSM (Process Safety Management) SMK3LL, ISR5
-- Baseline Assessment
+- Baseline Assessment (Audit awal): hasilin rekomendasi
+- Hasil rekomendasi, analisis ulang risiko (probabilitas x konsekuensi), cost-benifit analysis (Seberapa jauh dia kuranngi risiko dan seberapa besar biaya yang dikeluarkan)
 
 > Probabilitas: Jumlah kejadian per satuan waktu (pada waktu tertentu)
 
