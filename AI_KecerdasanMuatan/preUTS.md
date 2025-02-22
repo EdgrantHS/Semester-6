@@ -149,3 +149,5 @@ Model terlalu buruk dalam memprediksi data training, dan juga tidak baik dalam m
 
 ![Classifier Metrics](./Files/Week2a.png)
 
+## Regresi (Week 3)
+

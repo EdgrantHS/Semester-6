@@ -34,16 +34,51 @@ Setelah sinyal audio dikompresi, sinyal tersebut akan di-decode jika akan diputa
 - Meningkatkan Quality of Service (QoS) oleh pengguna
 - Menurunkan biaya infrastruktur jaringan
 
-## Basic Concept of Audio Compression
+## Details of Audio Compression
+ 
+### Factors of Audio Compression Quality
+
+#### 1. Bitrate
+
+Bitrate adalah jumlah data yang digunakan untuk merepresentasikan sinyal audio dalam satu detik. Bitrate yang lebih tinggi akan menghasilkan kualitas audio yang lebih baik, namun akan membutuhkan ruang penyimpanan yang lebih besar.
+
+#### 2. Sampling Rate
+
+Sampling rate adalah jumlah cuplikan yang diambil dalam satu detik. Sampling rate yang lebih tinggi akan menghasilkan kualitas audio yang lebih baik, namun akan membutuhkan ruang penyimpanan yang lebih besar.
+
+#### 3. Bit Depth/Resolution
+
+Bit depth adalah jumlah bit yang digunakan untuk merepresentasikan setiap cuplikan. Bit depth yang lebih tinggi akan menghasilkan kualitas audio yang lebih baik, namun akan membutuhkan ruang penyimpanan yang lebih besar.
+
+#### 4. CODEC (Coder-Decoder)
+
+CODEC adalah algoritma yang digunakan untuk mengompresi dan mendekompresi sinyal audio. CODEC yang lebih baik akan menghasilkan kualitas audio yang lebih baik, namun akan membutuhkan ruang penyimpanan yang lebih besar. Contoh CODEC yang sering digunakan dari urutan kualitas terbaik ke terburuk adalah:
+
+- FLAC (Free Lossless Audio Codec)
+- MP3 (MPEG-1 Audio Layer III)
+- AAC (Advanced Audio Coding)
 
 ### Types of Audio Compression
 
-### CODEC (Coder-Decoder)
+#### 1. Lossless Compression
 
+Lossless compression adalah metode kompresi yang mengurangi ukuran file tanpa mengurangi kualitas audio. Lossless compression sering digunakan untuk menyimpan audio dengan kualitas yang sama dengan audio asli.  Beberapa contoh lossless compression adalah:
 
+- FLAC (Free Lossless Audio Codec)
+- ALAC (Apple Lossless Audio Codec)
+- WAV (Waveform Audio File Format)
 
-### Audio Compression Techniques
+#### 2. Lossy Compression
 
-### Relation between Quality of audio with Bit Rate
+Lossy compression adalah metode kompresi yang mengurangi ukuran file dengan mengurangi kualitas audio. Lossy compression sering digunakan untuk mentransmisikan audio melalui jaringan dengan kecepatan yang lebih tinggi atau memainkan audio dengan ekspektasi pengguna yang lebih rendah seperti audio streaming. Beberapa contoh lossy compression adalah:
 
-### Factors of Audio Compression Quality
+- MP3 (MPEG-1 Audio Layer III)
+- AAC (Advanced Audio Coding)
+- OGG (Ogg Vorbis)
+
+### Audio Compression Standards
+
+#### 1. MPEG-1 Audio Layer III (MP3)
+
+MP3 adalah standar audio compression yang paling populer. MP3 menggunakan lossy compression untuk mengurangi ukuran file audio. MP3 memiliki kualitas audio yang baik dan ukuran file yang relatif kecil. MP3 sering digunakan untuk streaming audio dan musik.
+

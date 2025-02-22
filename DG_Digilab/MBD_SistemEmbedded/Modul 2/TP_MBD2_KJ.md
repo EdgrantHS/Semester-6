@@ -19,7 +19,7 @@ NPM: [isi]
 - Instruksi berbeda, x86 lebih kompleks
 - x86 memiliki lebih banyak instruksi
 
-## 2. Apa register-register utama yang mengatur pin yang akan digunakan pada praktikum, jelaskan fungsi dan kapan dipakai setiap register tersebut! (30 poin)
+## 2. Apa register-register utama yang mengatur pin yang akan digunakan pada praktikum, jelaskan fungsi dan kapan dipakai setiap register tersebut! (20 poin)
 
 - DDRx (Data Direction Register) untuk mengatur pin sebagai input atau output
 - PORTx untuk menulis data ke pin yang dikonfigurasi sebagai output atau untuk mengaktifkan/menonaktifkan internal pull-up resistor pada pin yang dikonfigurasi sebagai input

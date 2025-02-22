@@ -43,7 +43,7 @@ Trade off antara ketiga hal tersebut
 - filter for RX
 - RX: Receive
 
-> Antena paling baik pada 1/4, 1/2, 1 panjang gelombang, apa yg terjadi pada telescoping antenna (yang di mobil bisa diatur panjangnya): [https://chatgpt.com/share/67b535b4-2ddc-8001-9f10-16070e58bb89](https://chatgpt.com/share/67b535b4-2ddc-8001-9f10-16070e58bb89), idk ini bahas amplitudo, idk jawaban aslinya
+> Antena paling baik pada 1/4, 1/2, 1 panjang gelombang, apa yg terjadi pada telescoping antenna (yang di mobil bisa diatur panjangnya): [https://chatgpt.com/share/67b535b4-2ddc-8001-9f10-16070e58bb89](https://chatgpt.com/share/67b535b4-2ddc-8001-9f10-16070e58bb89), frek FM hampir setiap panjang gelombang bisa ditangkap secara baik, gak segitu sensitif
 
 > Gelombang yang frekuensi rendah, lebih tahan terhadap regangan, jadi submarine paki low frekuensi (30kHz), atau contoh lain petir kalau jauh yg kita dengar hanya frekuensi rendahnya
 
