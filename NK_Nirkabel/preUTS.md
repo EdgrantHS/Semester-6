@@ -78,3 +78,17 @@ BTS prioritas lebih tinggi dibanding client, jadi client harus menyesuaikan frek
 BTS:
 - Recieve frek tinggi: 
 - Transit frek rendah: Saat BTS kirim data control, frek rendah lebih tahan terhadap interferensi dan regangan 
+
+## (Week 4)
+
+### TDD (Time Division Duplex)
+
+- Uplink dan downlink menggunakan frekuensi yang sama, namun diatur dengan waktu yang berbeda
+
+### TDMA (Time Division Multiplexing Access)
+
+Advance TDMA, kalau ada paket yg collision, handle packet akan dibagi ke slot selanjutnya
+
+---
+
+Distance berpengaruh di TDD/TDMA karena propagasi delay berbeda beda, jadi harus diatur dengan baik agar tidak terjadi collision.

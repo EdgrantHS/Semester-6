@@ -134,3 +134,6 @@ Severity Assessment
 > Probability kecelakaan motor hanya 1, dia jatuh, tetapi Severity bisa banyak (PEAR)
 
 > Major Accident Hazzard (MAH): Severity 4 ke atas, tidak peduli probabilitasnya
+
+## (Week 4)
+
