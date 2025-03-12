@@ -1,0 +1,96 @@
+# Bab 1 \- Introduction
+
+## Background
+
+Makan Bergisi Gratis (MBG) banyak kontroversi
+
+## Project Summary
+
+Membuat aplikasi tracking inventaris antar banyak node. Infrastrukturnya terdiri dari 3 jenis node:
+
+- Node Gudang
+- Node Dapur
+- Node Sekolah
+
+### Inventaris antar node
+
+Setiap node memiliki database inventaris masing-masing. Setiap node dapat mengirimkan inventaris ke node lain. Setiap node dapat menerima inventaris dari node lain. Namun kecenderungan pengiriman inventaris adalah dari node gudang ke node dapur, dan dari node dapur ke node sekolah.
+
+### Proses pengiriman inventaris
+
+Sebelum proses pengiriman, petugas pada node pengirim akan scan QR pada paket barang yang akan dikirim. Saat barang sampai di node penerima, petugas pada node penerima akan scan QR pada paket barang yang diterima. Setelah itu, sistem akan otomatis mengupdate database inventaris pada node penerima. 
+
+Saat barang di-scan petugas pada node pengirim, sistem akan otomatis menghapus barang dari database inventaris pada node pengirim. Saat barang di-scan petugas pada node penerima, sistem akan otomatis menambah barang ke database inventaris pada node penerima.
+
+### Proses pengolah inventaris
+
+Pada node dapur, bahan baku yang diterima dari node gudang akan diolah menjadi makanan siap saji. Pemilihan bahan baku yang akan diolah menjadi makanan siap saji dilakukan oleh petugas dapur melalui sebuah quick menu (contohnya petugas dapur memiliki membuat 10 roti A, inventaris akan bertambah 10 roti A dan berkurang bahan baku yang dibutuhkan untuk membuat 10 roti A). Jika menu yang diinginkan tidak ada pada quick menu, petugas dapur dapat membuat temporary menu baru yang hanya dapat dilihat oleh petugas dapur pada node tersebut. Jika menu yang dibuat oleh petugas dapur dianggap cocok, node admin dapat mengkonfirmasi menu tersebut dan dapat dilihat oleh petugas dapur pada node lain.
+
+### Proses distribusi makanan
+
+Setelah makanan siap saji selesai dibuat, petugas dapur akan memasukkan makanan siap saji ke dalam paket makanan. Paket makanan akan dikirim ke node sekolah. Petugas dapur akan scan QR pada paket makanan yang akan dikirim. Saat makanan sampai di node sekolah, petugas pada node sekolah akan scan QR pada paket makanan yang diterima. Setelah itu, sistem akan otomatis mengupdate database inventaris pada node sekolah.
+
+### Proses Pelaporan Ketidaksesuaian
+
+Jika node penerima mendapatkan barang yang tidak sesuai dengan pesanan, petugas pada node penerima dapat melaporkan ketidaksesuaian tersebut. Laporan ketidaksesuaian dapat dilihat oleh admin dan dapat dilihat sumber node yang mengirim barang yang tidak sesuai.
+
+### Privileges Levels
+
+#### System Admin
+
+- Membuat, mengedit, dan menghapus akun petugas
+- Melihat seluruh laporan ketidaksesuaian
+- Melihat dan mengedit database inventaris pada seluruh node
+
+#### Node Admin
+
+- Melihat laporan ketidaksesuaian yang terjadi pada node tersebut
+- Melihat dan mengedit database inventaris pada node tersebut
+- Membuat, mengedit, dan menghapus akun petugas pada node tersebut
+- Mengkonfirmasi menu yang dibuat oleh petugas dapur (Hanya untuk admin dapur)
+  
+#### Petugas Gudang
+
+- Menambahkan barang ke database inventaris pada node gudang
+- Scan QR pada paket barang yang akan dikirim ke node dapur
+  
+#### Petugas Dapur
+
+- Scan QR pada paket bahan baku yang diterima dari node gudang
+- Scan QR pada paket makanan yang akan dikirim ke node sekolah
+- Melihat quick menu dan memilih menu yang akan dibuat (Akan secara otomatis mengurangi bahan baku yang dibutuhkan)
+- Membuat temporary menu baru
+
+#### Petugas Sekolah
+
+- Scan QR pada paket makanan yang diterima dari node dapur
+- Memberikan laporan ketidaksesuaian jika menerima barang yang tidak sesuai
+
+# Bab 2 \- Functional Objectives
+
+## Prioritas Tinggi
+- **Pengembangan Database Inventaris:**  
+  Mengembangkan database inventaris yang terpisah untuk masing-masing node (Gudang, Dapur, dan Sekolah), sehingga setiap admin node dapat mengakses dan mengelola data inventaris di node-nya.
+
+- **Fitur Pemindaian QR pada Pengiriman Barang:**  
+  Mengimplementasikan fitur scan QR untuk paket barang yang dikirim oleh petugas node pengirim. Saat pemindaian dilakukan, sistem secara otomatis menghapus data barang dari database inventaris node pengirim.
+
+- **Fitur Pemindaian QR pada Penerimaan Barang:**  
+  Mengimplementasikan fitur scan QR untuk paket barang yang diterima oleh petugas node penerima. Pemindaian ini akan memicu sistem untuk secara otomatis menambahkan data barang ke database inventaris node penerima.
+
+- **Fitur Quick Menu untuk Pengolahan Bahan Baku:**  
+  Menyediakan opsi bagi petugas dapur untuk memilih bahan baku yang akan diolah menjadi makanan siap saji melalui quick menu. Pemilihan bahan baku ini secara otomatis akan mengurangi jumlah stok bahan baku yang diperlukan.
+
+## Prioritas Menengah
+- **Fitur Pembuatan Temporary Menu:**  
+  Mengembangkan fitur yang memungkinkan petugas dapur membuat temporary menu baru. Menu ini hanya dapat diakses oleh petugas dapur di node terkait.
+
+- **Fitur Konfirmasi Menu oleh Node Admin:**  
+  Menyediakan mekanisme bagi node admin untuk mengkonfirmasi menu yang dibuat oleh petugas dapur. Setelah dikonfirmasi, menu tersebut akan dapat diakses oleh petugas dapur pada node lain.
+
+- **Fitur Pelaporan Ketidaksesuaian:**  
+  Mengembangkan fitur bagi petugas node penerima untuk melaporkan ketidaksesuaian barang yang diterima. Laporan ini akan ditampilkan kepada admin serta mengindikasikan node asal pengiriman barang yang tidak sesuai.
+
+## Prioritas Rendah
+- Saat ini, tidak ada fitur dengan prioritas rendah yang telah didefinisikan.
+

@@ -1,0 +1,137 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Tugas Individu Piramida Komputasi Awan\\
+}
+
+\author{\IEEEauthorblockN{Edgrant Henderson Suryajaya}
+\IEEEauthorblockA{2206025016}
+}
+
+\maketitle
+
+\section{Sejarah}
+Pada tahun 1990-an, perusahaan telekomunikasi menyediakan layanan jaringan komputer yang disebut dengan Virtual Private Network (VPN) yang memungkinkan banyak user menggunakan hardware yang sama. Ini merupakan awal dari konsep cloud computing. Lalu, konsep seperti grid computing, utility computing, dan Software as a Service (SaaS) muncul sebagai cikal bakal dari cloud computing.
+
+\begin{itemize}
+    \item \textit{Grid computing}: Masalah komputasi dibagi menjadi beberapa bagian dan dikerjakan oleh beberapa komputer yang berbeda
+    \item \textit{Utility computing}: menjual layanan komputasi
+    \item \textit{Software as a Service (SaaS)}: menyediakan \textit{software} pada user melalui internet
+\end{itemize}
+
+\begin{quote}
+``\textit{Cloud Computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources that can be rapidly provisioned and released with minimal management effort or service provider interaction}.''
+\end{quote}
+Itulah definisi \textit{Cloud Computing} oleh NIST. Dalam kata lain, cloud computing memberikan layanan sumber daya komputasi \textit{sharing} yang mudah dikonfigurasi.
+
+\section{Roots of Cloud Computing}
+
+Menurut NIST (\textit{National Institute of Standards and Technology}), \textit{Cloud Computing} memiliki 5 karakteristik utama, 3 model layanan, dan 5 model implementasi. 
+
+\subsection{Model Layanan Cloud Computing}
+
+\begin{itemize}
+    \item \textit{Software as a Service (SaaS)}: menyediakan aplikasi yang sudah jadi. Pelanggan hanya perlu menggunakan aplikasi tersebut tanpa perlu mengurus infrastruktur atau pembuatan aplikasi. (Contoh: Google Docs, Microsoft Office 365)
+    \item \textit{Platform as a Service (PaaS)}: menyediakan platform untuk pengembangan aplikasi. Pelanggan dapat membuat aplikasi mereka sendiri tanpa perlu mengurus infrastruktur. (Contoh: Vercel, Heroku, Wordpress)
+    \item \textit{Infrastructure as a Service (IaaS)}: menyediakan infrastruktur komputasi, seperti server, jaringan, dan penyimpanan. Pelanggan dapat mengelola infrastruktur tersebut sesuai kebutuhan mereka. (Contoh: Amazon Web Services, Microsoft Azure)
+\end{itemize}
+
+Saas adalah layanan yang \textit{High Level}, user hanya perlu menggunakan aplikasi dan tidak perlu memikirkan implementasi dibaliknya. PaaS adalah layanan yang \textit{Middle Level}, user dapat mengembangkan aplikasi mereka sendiri tanpa perlu memikirkan infrastruktur. IaaS adalah layanan yang \textit{Low Level}, user dapat mengelola infrastruktur sesuai kebutuhan mereka.
+
+\subsection{Model Implementasi Cloud Computing}
+
+\begin{itemize}
+    \item \textit{Public Cloud}: layanan cloud yang disediakan oleh penyedia layanan cloud dan dapat diakses oleh publik. (Contoh: AWS, Azure, Google Cloud)
+    \item \textit{Private Cloud}: layanan cloud yang disediakan oleh perusahaan sendiri untuk kebutuhan internal biasanya digunakan oleh perusahaan besar. 
+    \item \textit{Hybrid Cloud}: gabungan dari public dan private cloud. Perusahaan menggunakan private cloud untuk data sensitif dan public cloud untuk data yang tidak sensitif.
+    \item \textit{Community Cloud}: layanan cloud yang digunakan oleh beberapa organisasi yang memiliki kepentingan yang sama. Contohnya kluster perumahan besar yang menggunakan layanan cloud khusus untuk kluster tersebut.
+    \item \textit{Virtual Private Cloud}: layanan cloud yang mengsimulasikan private cloud, tetapi sebenarnya menggunakan public cloud. Contohnya sebuah organisasi memberikan layanan cloud khusus untuk karyawan mereka tetapi sebenarnya data di-\textit{host} pada AWS.
+\end{itemize}
+
+Model implementasi cloud yang paling sering digunakan pada zaman sekarang adalah \textit{Public Cloud} dan \textit{Hybrid Cloud}. \textit{Public Cloud} digunakan oleh banyak perusahaan karena lebih murah dan mudah digunakan. \textit{Hybrid Cloud} digunakan oleh perusahaan besar yang memiliki data sensitif, tetapi juga ingin menggunakan layanan cloud yang murah.
+
+\subsection{Characteristics of Cloud Computing}
+
+\begin{itemize}
+    \item \textit{Rapid Elasticity}: kemampuan untuk menambah atau mengurangi sumber daya komputasi sesuai kebutuhan.
+    \item \textit{Measured Service}: penggunaan sumber daya komputasi diukur dan dilaporkan. Pengguna hanya membayar sumber daya yang digunakan.
+    \item \textit{On-demand Self-service}: sumber daya komputasi dapat digunakan tanpa perlu interaksi dengan penyedia layanan.
+    \item \textit{Ubiquitous Network Access}: sumber daya komputasi dapat diakses dari mana saja dan kapan saja.
+    \item \textit{Resource Pooling}: sumber daya komputasi disediakan secara bersamaan untuk beberapa pengguna. Sumber daya ini dapa dialokasikan sesuai kebutuhan.
+\end{itemize}
+
+\section{Virtualisasi}
+
+Tidak ada aplikasi yang menggunakan 100\% sumber daya komputasi yang ada pada server setiap saat, sehingga penyedia layanan cloud menggunakan teknologi virtualisasi untuk membagi sumber daya komputasi tersebut ke beberapa user. Virtualisasi memungkinkan satu server fisik digunakan oleh beberapa user secara bersamaan.
+
+Virtualisasi adalah teknologi yang memungkinkan satu server fisik untuk menjalankan beberapa sistem operasi secara bersamaan yang masing-masing berjalan secara independen dan terisolasi. Terdapat beberapa tipe virtualisasi yang digunakan pada cloud, beberapa antaranya adalah \textit{Hypervisor-based Virtualization} dan \textit{Container-based Virtualization}.
+
+\subsection{Hypervisor-based Virtualization}
+
+\textit{Hypervisor} adalah software yang menjalankan beberapa sistem operasi secara bersamaan pada satu server fisik. Terdapat dua tipe \textit{Hypervisor}, yaitu \textit{Type 1 Hypervisor} dan \textit{Type 2 Hypervisor}.
+
+\begin{itemize}
+    \item \textit{Type 1 Hypervisor}: \textit{Hypervisor} berjalan langsung pada hardware server. Contoh dari \textit{Type 1 Hypervisor} adalah VMware ESXi, Microsoft Hyper-V, dan Xen.
+    \item \textit{Type 2 Hypervisor}: \textit{Hypervisor} berjalan di atas sistem operasi yang sudah ada. Contoh dari \textit{Type 2 Hypervisor} adalah VMware Workstation, Oracle VirtualBox, dan Parallels Desktop.
+\end{itemize}
+
+\textit{Hypervisor-based Virtualization} memungkinkan user untuk menjalankan sistem operasi yang berbeda pada satu server fisik. Setiap sistem operasi yang berjalan di-\textit{host} oleh \textit{Hypervisor} disebut dengan \textit{Virtual Machine}. \textit{Virtual Machine} memiliki sumber daya komputasi yang terisolasi dari \textit{Virtual Machine} lainnya yang ditentukan saat pembuatan \textit{Virtual Machine} tersebut.
+
+\subsection{Container-based Virtualization}
+
+\textit{Container-based Virtualization} adalah teknologi yang memungkinkan user untuk menjalankan aplikasi dan dependensinya dalam wadah yang terisolasi dari aplikasi lainnya. \textit{Container} berbagi kernel dari sistem operasi yang sama. Contoh dari \textit{Container-based Virtualization} adalah Docker, Kubernetes, dan LXC.
+
+Perbedaan utama antara \textit{Hypervisor-based Virtualization} dan \textit{Container-based Virtualization} adalah pembagaian sumber daya komputasi. \textit{Hypervisor-based Virtualization} membagi sumber daya komputasi secara fisik seperti RAM, CPU, dan storage \textit{Virtual Machine} dibuat, sedangkan \textit{Container-based Virtualization} dapat membagi sumber daya komputasi secara dinamis sesuai kebutuhan aplikasi.
+
+\section{Concern of Cloud Players}
+
+Dalam penggunaan layanan cloud, terdapat banyak \textit{stakesholder} yang memiliki kepentingan masing-masing. \textit{Stakeholder} tersebut adalah manajer fasilitas, penyedia layanan, pengguna layanan, manajer IT, dan \textit{End User}. Kepentingan dari \textit{stakeholder} tersebut adalah berbeda-beda
+
+\begin{itemize}
+    \item \textit{Manajer fasilitas}: memastikan infrastruktur \textit{data center} (DC) berjalan dengan baik dan aman. Memaksimalkan performa, meminimalkan biaya operasional.
+    \item \textit{Penyedia layanan}: memastikan layanan cloud yang disediakan aman, handal, dan tidak terputus. Memaksimalkan utilisasi peralatan, merencanakan kapasitas dengan mengkonsiderasi kemungkinan pertumbuhan.
+    \item \textit{Pengguna layanan}: memastikan \textit{End User} dapat menggunakan layanan mereka dengan baik. 
+    \item \textit{End User}: mementingkan data mereka aman, privasi terjaga, dan layanan yang mereka gunakan dapat diakses kapan saja.
+    \item \textit{Manajer IT}: IT dari sisi pengguna layanan, memastikan layanan yang digunakan oleh \textit{End User} dapat diakses kapan saja, aman, dan privasi terjaga. Selain itu, merencanakan kemungkinan pertumbuhan layanan.
+\end{itemize}
+
+Kelima \textit{stakeholder} tersebut memiliki kepentingan yang berbeda-beda, tetapi terdapat beberapa kepentingan yang sama, yaitu keamanan data, privasi, dan ketersediaan layanan. Teknologi \textit{Cloud Computing} yang digunakan harus memenuhi kepentingan dari kelima \textit{stakeholder} tersebut.
+
+\section{Considerations for Data Centers}
+
+\subsection{Migration}
+
+DC harus mempertimbangkan migrasi data dari satu DC ke DC lainnya. Kemungkinan terjadinya \textit{downtime} harus diminimalkan. DC harus memastikan data yang di-\textit{migrate} aman, tidak terjadi kehilangan data, dan data dapat diakses kapan saja.
+
+\subsection{Performence}
+
+DC harus memastikan performa layanan yang diberikan kepada pengguna layanan. DC harus memastikan sumber daya komputasi yang digunakan oleh pengguna layanan optimal, tidak terjadi \textit{overload} atau \textit{underload} pada sumber daya komputasi. DC harus memastikan layanan yang diberikan dapat diakses kapan saja dengan performa yang baik.
+
+\subsection{Security}
+
+Public cloud sering menjadi target serangan \textit{cyber}. Tergantung dengan model layanan yang digunakan, tangung jawab keamanan data dapat berbeda-beda. Sebagai contoh, pada model \textit{Infrastructure as a Service (IaaS)}, penyedia layanan hanya bertanggung jawab untuk keamanan infrastruktur, sedangkan pengguna layanan bertanggung jawab untuk keamanan data mereka. DC harus memastikan data yang disimpan aman, tidak terjadi kebocoran data, dan data tidak diakses oleh pihak yang tidak berhak. Namun, pada model \textit{Software as a Service (SaaS)} atau \textit{Platform as a Service (PaaS)}, penyedia layanan bertanggung jawab untuk keamanan data dan aplikasi (hanya pada SaaS) yang disimpan oleh pengguna layanan.
+
+\begin{thebibliography}{3}
+
+\bibitem{b1} N. K. Sehgal, V. Chandra Joshi, A. Aggarwal, A. Mathur, and G. S. Tomar, ``Chapter 3,'' in \textit{Cloud Computing with Security}. Springer Nature Switzerland AG, 2020. doi: \href{https://doi.org/10.1007/978-3-030-24612-9_3}{10.1007/978-3-030-24612-9\_3}.
+
+\bibitem{b2} Amazon Web Services, ``What is a hypervisor?,'' Available: \href{https://aws.amazon.com/what-is/hypervisor/}{https://aws.amazon.com/what-is/hypervisor/}. [Accessed: Feb. 20, 2025].
+
+\bibitem{b3} Amazon Web Services, ``The difference between Docker and VMs,'' Available: \href{https://aws.amazon.com/id/compare/the-difference-between-docker-vm/}{https://aws.amazon.com/id/compare/the-difference-between-docker-vm/}. [Accessed: Feb. 20, 2025].
+
+\end{thebibliography}
+
+
+
+\end{document}

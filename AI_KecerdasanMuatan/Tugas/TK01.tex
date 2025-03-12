@@ -1,0 +1,99 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+% Untuk menambahkan gambar
+\usepackage{geometry} % Untuk mengatur margin
+\usepackage{float}    % Untuk mengontrol posisi gambar
+% \renewcommand{\baselinestretch}{1.5} 
+
+% Mengatur ukuran kertas dan margin
+\geometry{
+    a4paper,
+    left=2cm,
+    right=2cm,
+    top=3cm,
+    bottom=3cm
+}
+
+% Add the titling package to control title spacing
+\usepackage{titling}
+
+% Adjust the vertical space above the title (make it smaller)
+\setlength{\droptitle}{-2cm} % Adjust the value as needed
+
+\begin{document}
+
+\title{Kecerdasan Buatan TK-01 Kelompok 1}
+
+\date{}
+
+\author{
+    Edgrant H. S.\\
+    2206025016
+    \and
+    Evandita W.  P.\\
+    2206059572
+    \and
+    George W. T. G.\\
+    2206024253
+    \and
+    M. Billie E.\\
+    2206059446
+}
+
+
+\maketitle
+
+Kecerdasan buatan (artificial intelligence) adalah implementasi dari statistika untuk melakukan pemograman komputer tanpa harus mengimplementasikan algoritma secara explisit. Kecerdasan buatan dapat digunakan untuk merancang algoritma yang mampu belajar dari data dan melakukan prediksi atau pengambilan keputusan secara otomatis. Beberapa tipe algoritma kecerdasan buatan yang umum digunakan antara lain regresi, klasifikasi, dan clustering.
+
+\section*{1. Definisi Tipe Algoritma Kecerdasan Buatan}
+\begin{itemize}
+    \item \textbf{\textit{Regresi}}: Regresi adalah salah satu metode untuk memodelkan hubungan antara variabel dependen (target) dan variabel independen (fitur). Regresi sering digunakan untuk masalah prediksi kontinu, seperti prediksi harga rumah berdasarkan luas tanah dan lokasi.
+
+    \item \textbf{\textit{Klasifikasi}}: Klasifikasi adalah proses pengelompokkan data menjadi kelas yang sudah ditentukan ber-dasarkan fitur-fitur yang ada. Contoh aplikasi klasifikasi dalam kecerdasan buatan antara lain sistem deteksi penipuan, karena kategori penipuan dan bukan penipuan sudah ditentukan sebelumnya.
+
+    \item \textbf{\textit{Clustering}}: Clustering adalah teknik unsupervised learning yang digunakan untuk mengelompokkan data berdasarkan kemiripan atau similaritas kepada beberapa kelompok yang tidak diketahui sebelumnya. Contoh aplikasi clustering adalah pengelompokkan konsumen berdasarkan pola pembelian mereka.
+
+\end{itemize}
+
+\section*{2. Penjelasan Generative AI dan perbedaannya dengan 3 Algoritma Sebelumnya}
+
+Generative AI adalah sejenis kecerdasan buatan yang memiliki kemampuan untuk menciptakan konten baru berdasarkan keinginan pengguna. Konten yang dihasilkan oleh Generative AI sendiri dapat bervariasi dari bentuk teks, gambar, audio, dan video. Selain itu, Generative AI menggunakan model tersendiri, seperti GAN (Generative Adversarial Networks) atau Transformer untuk menghasilkan konten yang mirip dengan data yang ada. Beberapa contoh Generative AI yang tersedia antara lain:
+
+\begin{enumerate}
+    \item ChatGPT, Deep Seek, Gemini untuk menghasilkan konten teks,
+    \item Stable Diffussion untuk menghasilkan konten gambar,
+    \item Speechify untuk menghasilkan konten audio, dan
+    \item Sora untuk menghasilkan konten video
+\end{enumerate}
+
+Perbedaan utama antara Generative AI dan algoritma Machine Learning klasik (seperti regresi, klasifikasi, dan clustering) terletak pada tujuan dan cara kerjanya. Algoritma klasik biasanya digunakan untuk tugas prediksi atau pengelompokan berdasarkan data yang ada. Sebagai contoh, model regresi biasa digunakan untuk memprediksi nilai rumah berdasarkan fitur-fitur tertentu, sedangkan model klasifikasi biasa digunakan untuk mengelompokkan email sebagai spam atau bukan.
+
+Di sisi lain, Generative AI mampu digunakan untuk menciptakan data baru tanpa adanya batasan pada topik-topik tertentu saja. Hal ini membuat Generative AI sangat populer karena fleksibilitas dalam penggunaannya. Akan tetapi, dibalik kelebihan dari Generative AI tersebut, terdapat faktor-faktor yang perlu menjadi konsiderasi, seperti salah satunya adalah akurasi jawaban yang dihasilkan. Algoritma klasik cenderung lebih akurat dalam tugas-tugas spesifik karena mereka dirancang untuk fokus pada data yang terbatas dan terstruktur. Sehingga, meskipun Generative AI sedang berkembang pesat, algoritma klasik seperti regresi, klasifikasi, dan clustering masih sangat berguna dalam situasi di mana akurasi menjadi prioritas utama.  
+
+\section*{3. Penggunaan Algoritma Kecerdasan Buatan}
+
+Algoritma kecerdasan buatan seperti regresi, klasifikasi, dan clustering memiliki berbagai aplikasi dalam dunia nyata. Misalnya:
+
+\begin{itemize}
+    \item \textbf{Regresi}: Dapat digunakan untuk memprediksi harga rumah berdasarkan fitur-fitur tertentu, seperti luas tanah, jumlah kamar, dan lokasi. Hasil akhir dari regresi adalah sebuah fungsi yang dapat memprediksi nilai kontinu. Setiap fitur memiliki bobot yang berbeda dalam mempengaruhi prediksi. Salah satu cara untuk mencari bobot yang optimal adalah dengan menggunakan metode \textit{least squares}.
+
+    \item \textbf{Klasifikasi}: Dapat digunakan untuk mengklasifikasikan email sebagai spam atau bukan spam. variabel independen (fitur) dalam klasifikasi adalah kata-kata yang terdapat dalam email, sedangkan variabel dependen (target) adalah kategori spam atau bukan spam. Beberapa cara melakukan klasifikasi adalah dengan menggunakan metode \textit{decision tree} yang membentuk banyak \textit{if else} untuk menentukan kategori, \textit{K Nearest Neighbour (KNN)} yang membandingkan data baru dengan data-data terdekatnya, dan \textit{Logistic Regression} yang menggunakan fungsi sigmoid untuk menentukan probabilitas kelas.
+
+    \item \textbf{Clustering}: Dapat digunakan untuk menganalisis pola belanja pelanggan tanpa harus mengetahui kategori pelanggan terlebih dahulu. Dengan menggunakan algoritma clustering, kita dapat mengelompokkan pelanggan berdasarkan pola pembelian mereka. Salah satu algoritma clustering yang umum digunakan adalah \textit{k-means}, yang mengelompokkan data ke dalam k kelompok berdasarkan jarak antara data dengan pusat kelompok. Nilai k ditentukan secara eksplisit oleh pengguna berdasarkan kebutuhan analisisnya.
+
+\end{itemize}
+
+\section*{Referensi}
+
+\begin{itemize}
+    \item Infinite Codes. (2024, September 17). All Machine Learning algorithms explained in 17 min [Video]. YouTube. https://www.youtube.com/watch?v=E0Hmnixke2g
+
+    \item Bhaskar, Y. (2023, October 21). 1. Introduction to statistical methods in AI — Overview. Medium. https://medium.com/@yash9439/introduction-to-statistical-methods-in-ai-overview-9bc981ba91d0
+
+    \item What is artificial intelligence (AI)? | Google Cloud. (n.d.). Google Cloud. \\ https://cloud.google.com/learn/what-is-artificial-intelligence
+
+    \item 3Blue1Brown. (2024, November 20). Large Language Models explained briefly | Deep learning chapter 1 [Video]. \\ https://www.youtube.com/watch?v=LPZh9BOjkQs    
+    
+\end{itemize}
+
+\end{document}
