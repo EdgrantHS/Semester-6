@@ -151,3 +151,61 @@ Contoh: ada code 8 bit
 - yang sampaikan ke BTS: resultan dari 3 signal,
   - +3, -1, -1, +1, +1, -1, -3, +3
 - Do magic stuff
+
+## Medium Access Control (Week 8)
+
+- Carrier Sense Multiple Access termasuk dalam kategori Medium Access Control Protocol (MAC)
+
+### Deterministic
+
+Reservation based:
+
+- central polling: ada central yang mengatur siapa yang boleh pakai, reserving
+  - Wifi
+  - 802.11 PCF
+  - 802.11e PCF
+- decentral polling (token ring): deprecated, token dikirimkan ke user, user yang punya token boleh pakai
+- beaconing
+
+### Random (Contention Based)
+
+#### Without Carrier Sense
+
+Tidak mendengar dulu frekuensi apakah sedang dipakai, langsung kirim data. Sangat jarang digunakan karena akan sering terjadi collision terutama pada jaringan yang padat.
+
+- ALOHA: Jika collision, kedua user tidak bisa menggunakan sistem. Terutama karena tidak ada pengaturan waktu
+- Slotted ALOHA: lebih modern, pakai slot waktu. Karena ada time-slot, collision lebih jarang karena pengiriman hanya pada slot waktu tertent u
+
+#### Carrier Sense
+
+> CSMA: Carrier Sense Multiple Access
+
+##### Slotted CSMA: Mendengar dulu frekuensi apakah sedang dipakai, jika tidak, kirim data pada slot waktu yang kosong
+
+##### CSMA: Mendengar dulu frekuensi apakah sedang dipakai, jika tidak, kirim data
+
+- CSMA/CD: Collision Detection, jika mendeteksi collision, kirim sinyal collision (jamming signal), dipakai di LAN (Ethernet) biasanya karena pada wireless tidak bisa mendeteksi collision karena saat transmisi, tidak bisa receive
+  - Hidden Terminal Problem: A tidak bisa mendengar B, B tidak bisa mendengar A, tapi keduanya bisa mendengar C. Jadi jika A dan B kirim data ke C, akan terjadi collision di C, A dan B tidak bisa mendeteksi collision (false negative)
+  - Exposed Terminal Problem: A mau transmit ke B, C mau transmit ke D. A dan C dalam satu area, jika mereka transmit bersamaan, tidak akan terjadi collision, tapi karena C mendengar A, C tidak transmit, padahal tidak akan terjadi collision
+
+- non-persistent CSMA: Jika mendeteksi frekuensi sedang dipakai, tunggu waktu yang random
+
+- 1-persistent: Jika mendeteksi frekuensi sedang dipakai, kirim data setelah frekuensi kosong, jika collision, stop pengiriman
+
+- p-persistent CSMA: Jika mendeteksi frekuensi sedang dipakai, kirim data dengan probabilitas p, jika collision, stop pengiriman
+
+- CSMA/CA: Collision Avoidance, jika mendeteksi frekuensi sedang dipakai, kirim data setelah waktu tertentu dengan sistemnya reservasi. DCF (Distributed Coordination Function) dan EDCA (Enhanced Distributed Coordination Access)
+  - WIFI, setiap device yang ingin mengirim data, mengirimkan RTS (Request to Send) ke AP, AP mengirimkan CTS (Clear to Send) ke device, device mengirimkan data, AP mengirimkan ACK (Acknowledgement) ke device yang mengirimkan data
+  - RTS dan CTS digunakan untuk menghindari hidden terminal problem, jika RTS bercollision, masih acceptable karena ukuran RTS kecil
+  - Device lain yang menerimia RTS yang bukan AP, akan defer (menunda) pengiriman data walau tidak mendengar CTS
+  - setelah CTS dan transmisi data, device yang menerima data akan mengirimkan ACK (layer 2, walaupun UDP masih ada karena UDP layer 4), jika tidak menerima ACK, device yang mengirimkan data akan mengirimkan data lagi
+
+> Pada wireless, saat transmisi, receiver tidak bisa mendengar frekuensi yang sedang dipakai, berbeda dengan wired, jadi harus ada sistem yang mengatur pengiriman data agar tidak terjadi collision
+
+---
+
+### Wifi (DCF)
+
+Distribution Coordination Function
+
+- Menggunakan RTS/CTS untuk avoid hidden terminal problem untuk data
