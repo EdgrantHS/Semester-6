@@ -151,3 +151,14 @@ Model terlalu buruk dalam memprediksi data training, dan juga tidak baik dalam m
 
 ## Regresi (Week 3)
 
+- $p(y = 1) =$ Spam
+- $p(y) = 0.25$ 
+- 
+- find $p(y | b,c)$
+- $p(y | b,c) = \frac{p(b,c | y) p(y)}{p(b,c)}$
+- $p(b,c) = \frac{p(b | y) p(c | y) p(y)}{p(b, c)}$
+- 
+- $p(b | y) = \frac{20}{25} = 0.8$
+- $p(c | y) = \frac{15}{25} = 0.6$
+- 
+- $p(b,c) = \frac{0.8 \times 0.6 \times 0.25}{\frac{20 + 5}{100} \times \frac{15 + 10}{100}} = \frac{0.12}{0.05} = 0.24$
