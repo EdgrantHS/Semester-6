@@ -51,3 +51,51 @@ Illustrasi:
 - Node, gudang, dapur, sekolah, interaksi antar node, informasi apa yang dikiripmkan
 - Proses sistem bekerja (prespektif admin dan user)
 - Interaksi komponen seperti user dan node
+
+## Tugas
+
+- Mengabung functional dan non functional requirement
+- Membuat Diagram
+  - Diagram interaksi user dan node
+  - Diagram interaksi antar node
+  - Diagram cara pemakian sistem (prespektif admin dan user)
+- Membuat bab introduction 2 halaman yang meyakinkan solusi yang dipilih
+- Memisahkan project summary dan project scope ke bab tersendiri
+
+## Struktur Laporan
+
+- Bab 1: Pendahuluan (2 halaman)
+  - Latar belakang
+  - Masalah
+  - Solusi (QR-based)
+- Bab 2: Rancangan Kerja Sistem
+  - Tujuan Laporan dan Proyek
+  - Deskripsi Sistem (Executive Summary)
+  - Project Scope
+  - Project Description
+    - Proses pengiriman inventaris
+    - Proses Distribusi inventaris
+    - Proses pelaporan
+    - Privelege level
+    - Location
+    - Need
+  - Users: responsibility, privilege level, dan cara penggunaan
+    - Admin pusat
+    - Admin Node
+    - Pekerja Gudang
+    - Pekerja Dapur
+    - Pekerja Sekolah
+- Bab 3: Kebutuhan Sistem
+  - Functional Requirement
+  - Non Functional Requirement
+
+---
+
+Isi bab 1:
+
+1. Apa itu MBG?
+2. Apa masalah MBG Umum? Masalah MBG spesifik yang dipilih?
+3. Bagaimana menyelesaikan masalah?
+4. Jelaskan singkat solusinya dari perspektif Complex Engineering Problem bidang Teknik Komputer.
+5. Perlu beberapa referensi engineering problem yang relevan.
+6. Jelaskan/promosikan bahwa solusi yang ditawarkan relevan untuk menyelesaikan masalah spesifik MBG?
