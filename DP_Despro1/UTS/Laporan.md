@@ -1,14 +1,13 @@
 # **Kata Pengantar**
 
-Puji dan syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya sehingga kami dapat menyelesaikan Laporan UTS Desain dan Pemrograman (Despro) ini dengan baik dan tepat waktu. Laporan ini disusun sebagai bagian dari pemenuhan tugas Ujian Tengah Semester pada mata kuliah Desain dan Pemrograman, yang merupakan bagian dari kurikulum di Program Studi Teknik Komputer, Fakultas Teknik, Universitas Indonesia.
+Puji syukur kami panjatkan kehadirat Tuhan Yang Maha Esa, karena atas berkat dan rahmat-Nya kami dapat menyelesaikan laporan ini dengan baik. Laporan ini disusun sebagai bagian dari mata kuliah Desain Proyek 1 (Despro 1) yang diampu oleh Bapak Yan Maraden, S.T., M.T., M.Sc. Laporan ini berisi tentang spesifikasi kebutuhan sistem tracking inventaris Makanan Bergizi Gratis (MBG) berbasis QR Code yang kami kembangkan.
 
-Kami menyadari bahwa laporan ini tidak akan dapat terselesaikan tanpa adanya bimbingan, dukungan, dan kerja sama dari berbagai pihak. Oleh karena itu, kami ingin mengucapkan terima kasih kepada:
+Kami mengucapkan terima kasih kepada semua pihak yang telah membantu dalam penyusunan laporan ini, terutama kepada
 
-1. **Dosen pengampu mata kuliah Desain dan Pemrograman**, yang telah memberikan bimbingan, arahan, dan ilmu yang sangat berharga selama proyek ini berlangsung.  
-2. **Rekan-rekan satu tim**, yang telah bekerja sama dengan baik dalam menyelesaikan proyek ini dengan penuh dedikasi dan tanggung jawab.  
-3. **Keluarga dan teman-teman**, yang telah memberikan dukungan moral dan motivasi selama proses pengerjaan laporan ini.
+1. Bapak Alfan Prasekal, S.T., M.Sc., selaku dosen pembimbing kelompok 13 yang telah memberikan bimbingan dan arahan selama proses penyusunan laporan ini.
+2. Bapak Yan Maraden, S.T., M.T., M.Sc., selaku dosen pengampu mata kuliah Despro 1 yang telah memberikan ilmu dan pengetahuan yang bermanfaat bagi kami.
 
-Kami menyadari bahwa laporan ini masih memiliki kekurangan dan jauh dari kesempurnaan. Oleh karena itu, kami sangat terbuka terhadap kritik dan saran yang membangun untuk perbaikan di masa mendatang. Kami berharap laporan ini dapat memberikan manfaat bagi pembaca serta menjadi referensi yang berguna bagi pengembangan sistem yang lebih baik di masa depan. Akhir kata, semoga laporan ini dapat memberikan kontribusi positif dalam bidang Desain dan Pemrograman serta menjadi bahan pembelajaran yang bermanfaat bagi semua pihak.
+Kami menyadari bahwa laporan ini masih jauh dari sempurna, oleh karena itu kami sangat mengharapkan kritik dan saran yang membangun dari semua pihak demi perbaikan di masa yang akan datang. Semoga laporan ini dapat bermanfaat bagi kita semua.
 
 Hormat kami,
 
@@ -499,11 +498,14 @@ Seluruh admin node memiliki hak sebagai berikut:
 
 Selain itu, terdapat hak akses tambahan yang dimiliki oleh admin node sesuai dengan jenis node-nya:
 
-* **Admin Gudang:** Admin gudang memiliki hak untuk membuat QR Code untuk setiap paket bahan baku yang akan dikirim ke dapur.
+* **Admin Gudang:** Admin gudang memiliki hak untuk membuat QR Code untuk setiap paket bahan baku yang akan dikirim ke dapur. 
 * **Admin Dapur:** Admin dapur memiliki hak untuk mengkonfirmasi menu yang dibuat oleh petugas dapur. Selain itu, admin dapur juga dapat membuat QR Code untuk setiap paket makanan siap saji yang akan didistribusikan ke sekolah.
 * **Admin Sekolah:** Admin sekolah tidak memiliki hak akses tambahan selain hak akses yang sama dengan admin node lainnya. 
 
 3. ### Petugas
 
-Petugas adalah pengguna yang memiliki hak akses terbatas. Hak akses ini mencakup pemindaian QR Code pada paket barang yang diterima dan dikirim, serta pelaporan ketidaksesuaian barang.
+Petugas adalah pengguna yang memiliki hak akses terbatas. Hak akses ini mencakup pemindaian QR Code pada paket barang yang diterima dan dikirim, serta pelaporan ketidaksesuaian barang. Petugas tidak dapat melihat data inventaris, tidak dapat mengelola data petugas, dan tidak dapat melihat laporan ketidaksesuaian; petugas hanya memiliki hak yang disebutkan sebelumnya. Namun, tergantung pada jenis node-nya, petugas memiliki hak akses tambahan sebagai berikut:
 
+* **Petugas Gudang:** Petugas gudang memiliki hak tambahan untuk menambah jumlah stok bahan baku yang diterima dari supplier. Petugas gudang tidak dapat membuat QR Code, hal ini hanya dapat dilakukan oleh admin gudang.
+* **Petugas Dapur:** Petugas dapur memiliki hak tambahan untuk mengolah bahan baku menjadi makanan siap saji sesuai dengan menu yang terdapat pada daftar menu. Petugas dapur juga dapat membuat menu baru jika menu yang ingin dibuat tidak ada dalam daftar menu yang sudah ada. Petugas dapur tidak dapat membuat QR Code, hal ini hanya dapat dilakukan oleh admin dapur.
+* **Petugas Sekolah:** Petugas sekolah tidak memiliki hak akses tambahan selain hak akses yang sama dengan petugas node lainnya. 
