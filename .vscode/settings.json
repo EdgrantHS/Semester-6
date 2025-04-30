@@ -4,6 +4,10 @@
         "*": true,
         "plaintext": false,
         "markdown": true,
-        "scminput": false
+        "scminput": false,
+        "python": true
+    },
+    "files.associations": {
+        "stdlib.h": "c"
     }
 }

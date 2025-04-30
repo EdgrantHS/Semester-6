@@ -4,7 +4,7 @@
 
 [File Latex Tugas](./Tugas/TK01.tex)
 
-## Data Preperation (Week 2) 
+## Data Preperation (Week 2)
 
 ### CRISP-DM Model
 
@@ -66,7 +66,7 @@ Mengubah data kategorikal menjadi data numerik. Contoh:
 
 - Kota: Jakarta, Bandung, Surabaya -> 0, 1, 2
 
-Jarkarta, jadinya data bernilai 0
+Jakarta, jadinya data bernilai 0
 
 #### One Hot Encoding
 
@@ -74,7 +74,7 @@ Jarkarta, jadinya data bernilai 0
 - Kota Bandung
 - Kota Surabaya
 
-Jarkarta, jadi data berniilai 1 0 0 
+Jakarta, jadi data bernilai 1 0 0
 
 - Pros: Beberapa algoritma dioptimasi untuk one hot encoding
 - Cons: Menambah dimensi data dan fitur
@@ -119,7 +119,7 @@ Minimum 10 kali jumlah fitur. Data yang diperlukan sebaiknya kombinasi dari selu
 - Generalisasi: Model yang baik adalah model yang dapat memprediksi data yang belum pernah dilihat sebelumnya
 - Interpretability: Model yang baik adalah model yang mudah dipahami oleh manusia
 - Prediction Speed: Model yang baik adalah model yang cepat dalam memprediksi data
-- Practicability: Prediksi acceptable saat voulme data besar
+- Practicability: Prediksi acceptable saat volume data besar
 
 ### Error
 
@@ -145,20 +145,21 @@ Model terlalu buruk dalam memprediksi data training, dan juga tidak baik dalam m
 - False Positive: Prediksi benar, hasil salah (FP)
 - False Negative: Prediksi salah, hasil benar (FN)
 
-#### Classifer metrics
+#### Classifier metrics
 
-![Classifier Metrics](./Files/Week2a.png)
+![Cassifier Metrics](./Files/Week2a.png)
 
 ## Regresi (Week 3)
 
 - $p(y = 1) =$ Spam
-- $p(y) = 0.25$ 
-- 
+- $p(y) = 0.25$
+-
 - find $p(y | b,c)$
 - $p(y | b,c) = \frac{p(b,c | y) p(y)}{p(b,c)}$
 - $p(b,c) = \frac{p(b | y) p(c | y) p(y)}{p(b, c)}$
-- 
+-
 - $p(b | y) = \frac{20}{25} = 0.8$
 - $p(c | y) = \frac{15}{25} = 0.6$
-- 
+-
 - $p(b,c) = \frac{0.8 \times 0.6 \times 0.25}{\frac{20 + 5}{100} \times \frac{15 + 10}{100}} = \frac{0.12}{0.05} = 0.24$
+

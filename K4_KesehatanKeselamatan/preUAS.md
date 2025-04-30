@@ -132,7 +132,11 @@ Objective: Find ways to make repetitive jobs easier and safer, and to reduce the
 
 > [!IMPORTANT]
 > Tugas Kelompok Audit
+> 
+> ```plaintext
 > UAS: 2 juni
 > 19Mei / 26 Mei, presentasi hasil audit
 > 6 Mei harus udah ada nama perusahaan
+> ```
+>
 > Berdasarkan SMK3

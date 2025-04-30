@@ -1,0 +1,13 @@
+{
+  // Configuration for markdownlint
+  "default": true, // Enable all default rules
+  "MD013": false,   // Disable rule MD013 (Line length)
+  // "MD042": false,   // Disable rule MD042 (No empty links)
+  // "MD036": false,   // Disable rule MD036 (Emphasis used instead of strong)
+  // "MD029": false,   // Disable rule MD029 (Ordered list item prefix)
+  // "MD034": false,   // Disable rule MD034 (Bare URL used)
+  
+
+  // You can add more rule configurations here, e.g.:
+  // "MD007": { "indent": 4 } // Configure rule MD007 (Unordered list indentation)
+}
