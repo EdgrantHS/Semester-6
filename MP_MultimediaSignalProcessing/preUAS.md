@@ -65,7 +65,7 @@ Translation
 
 Erosi
 
-- $$A \ominus B = \{z | (B)_z \subseteq A\}$$
+- $$A \ominus B = \{z | (B)_z \subseteq A\}$G$
 - B adalah structuring element, $A$ adalah citra
 - B subset dari A
 
@@ -73,3 +73,22 @@ Dilasi
 
 - $$A \oplus B = \{z | (B)_z \cap A^C \neq \emptyset\}$$
 - B intersect A tidak kosong
+
+## Image Segmentation (Week b4)
+
+- Segmentasi paling sederhana: Thresholding
+- Edge detection: Mencari batas objek dalam citra
+- Graph-based segmentation: Menggunakan graph untuk segmentasi citra
+- Clustering: Mengelompokkan piksel berdasarkan kesamaan
+
+### Types of Segmentation
+
+- **Semantik Segmentation**: Mengelompokkan piksel berdasarkan label objek, objek terpisah yang jenisnya sama akan dikelompokkan menjadi 1
+- **Instance Segmentation**: Memisahkan objek yang berbeda dalam citra, objek yang berbeda tetapi jenisnya sama tidak akan dikelompokkan menjadi 1
+
+### Line Detection
+
+- Kernel, convolution based
+- Hough Transform: Mencari garis dalam citra dengan mengubah koordinat piksel ke ruang parameter
+
+### Edge Detection
