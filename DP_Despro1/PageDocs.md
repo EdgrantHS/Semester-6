@@ -481,50 +481,270 @@ UNIVERSITY OF INDONESIA
 
 Dokumentasi Page ini bertujuan untuk bertindak sebagai panduan bagi developer untuk mengembangkan sistem yang telah dirancang. Selain itu, dokumentasi ini juga bertujuan untuk memberikan gambaran umum tentang sistem.
 
-# Overview Halaman
+1. ## Penjelasan Halaman
 
-## Halaman Umum
+1. ### Halaman Super Admin
 
-Halaman-halaman yang dapat diakses oleh semua pengguna, baik admin pusat, admin node, maupun petugas.
+   #### Halaman Dashboard Super Admin
 
-- **Login Page**: Pengguna memasukkan username dan password yang disediakan untuk mengakses sistem.
-- **Forgot Password Page**: Halaman untuk mengontak admin node jika pengguna lupa password
-- **Home Page**: Halaman utama, tampilan masih tentatif dan belum final.
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan ringkasan data inventaris dari seluruh node.	
 
-## Halaman Petugas
+![][image1]
 
-Halaman-halaman yang hanya dapat diakses oleh petugas. Terdapat tiga jenis petugas yang memiliki perbedaan pada hak akses beberapa halaman.
+**Gambar 4.1.**		Wireframe Halaman Dashboard Super Admin
 
-- **QR Code Create Page (Hanya Node Source dan Assembly)**: Halaman untuk membuat QR Code pada paket barang yang akan dikirim.
-- **QR Code Scan Page**: Halaman untuk memindai QR Code pada paket barang. Setelah pemindaian, aplikasi akan menampilkan informasi detail mengenai paket barang tersebut.
-- **Report Page**: Halaman untuk melaporkan ketidaksesuaian barang yang diterima.
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Overview | Menampilkan ringkasan data inventaris dari seluruh node. | Button untuk berpindah ke halaman Inventory Management. | Data inventaris dari seluruh node. |
+| Recent Reports | Menampilkan laporan ketidaksesuaian terbaru dari seluruh node. | Row dapat diklik untuk melihat detail laporan.  Button untuk berpindah ke halaman Report Management. | Daftar laporan ketidaksesuaian terbaru dari seluruh node. |
 
-## Halaman Admin Node
+**Tabel 4.1.**		Section Halaman Dashboard Super Admin
 
-Halaman-halaman yang hanya dapat diakses oleh admin node. Terdapat tiga jenis admin node yang memiliki perbedaan pada hak akses beberapa halaman.
+---
 
-Halaman-halaman yang universal untuk semua admin node:
+#### Halaman Node Management Super Admin
 
-- **Node Dashboard Page**: Halaman utama yang menampilkan ringkasan data inventaris, laporan ketidaksesuaian, dan distribusi makanan dari node tersebut.
-- **Node User Page**: Halaman untuk mengelola data user (tambah, edit, hapus) node tersebut.
-- **Node Report Page**: Halaman untuk mengelola data laporan ketidaksesuaian (tambah, edit, hapus) node tersebut.
-- **Node Distribution Page**: Halaman untuk mengelola data distribusi makanan (tambah, edit, hapus) yang sedang transit pada node tersebut, baik dikirim dari node lain maupun yang sedang dalam proses pengiriman ke node lain.
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan daftar node yang terdaftar dalam sistem.
 
-Halaman-halaman yang hanya dapat diakses oleh khusus:
+![][image2]
 
-- **Menu Page (Hanya Node Assembly)**: Halaman untuk mengelola data menu (tambah, edit, hapus) node tersebut, termasuk mengkonfirmasi menu sementara.
-- **Inventory Page (Hanya Node Source dan Assembly)**: Halaman untuk mengelola data inventaris (tambah, edit, hapus) node tersebut.
-- **Node QR Code Page**: Halaman untuk mengelola data QR Code (tambah, edit, hapus) yang digunakan dalam sistem.
+**Gambar 4.2.**		Wireframe Halaman Node Super Admin
 
-## Halaman Admin Pusat
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Node List | Menampilkan daftar node yang terdaftar dalam sistem. | Row dapat diklik untuk melihat detail node. Add Node Button untuk menambahkan node baru.  | Daftar node yang terdaftar dalam sistem. |
+| Node Detail | Menampilkan detail dari node yang dipilih. | Button untuk berpindah ke halaman Node Detail yang menampilkan Node Inventory Management, Node User Management, Node Report Management, dan Node Menu Management.  Button untuk mengedit node. Button untuk menghapus node. | Detail dari node yang dipilih (nama, alamat, dan informasi lainnya). |
+| Add Node Button | Menambahkan node baru ke dalam sistem. | Popup form untuk menambahkan node baru. |  |
+| Delete Node Button | Menghapus node dari sistem. | Popup konfirmasi untuk menghapus node. |  |
 
-Halaman-halaman yang hanya dapat diakses oleh admin pusat.
+**Tabel 4.2.**		Section Halaman Node Super Admin
 
-- **Admin Dashboard Page**: Halaman utama yang menampilkan ringkasan data inventaris, laporan ketidaksesuaian, dan distribusi makanan dari seluruh node.
-- **Admin Node Page**: Halaman untuk mengelola data node (tambah, edit, hapus).
-- **Admin User Page**: Halaman untuk mengelola seluruh data user (tambah, edit, hapus) setiap node.
-- **Admin Inventory Page**: Halaman untuk mengelola seluruh data inventaris (tambah, edit, hapus) setiap node.
-- **Admin Report Page**: Halaman untuk mengelola seluruh data laporan ketidaksesuaian (tambah, edit, hapus) setiap node.
-- **Admin Distribution Page**: Halaman untuk mengelola seluruh data distribusi makanan (tambah, edit, hapus) setiap node.
-- **Admin Menu Page**: Halaman untuk mengelola seluruh data menu (tambah, edit, hapus) setiap node, termasuk menu sementara dan menu tetap.
-- **Admin QR Code Page**: Halaman untuk mengelola seluruh data QR Code (tambah, edit, hapus) yang digunakan dalam sistem.
+---
+
+#### Halaman User Management Super Admin
+
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan daftar petugas yang terdaftar dalam sistem.
+
+![][image2]
+
+**Gambar 4.3.**		Wireframe Halaman User Super Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| User List | Menampilkan daftar petugas yang terdaftar dalam sistem. | Row dapat diklik untuk melihat detail user.  Add User Button untuk menambahkan user baru.   Delete User Button pada setiap row untuk menghapus user.  Assign Role Button pada setiap row untuk memberikan peran kepada user. | Daftar user yang terdaftar dalam sistem. |
+| User Detail | Menampilkan detail dari user yang dipilih. | Button untuk berpindah ke halaman User Detail yang menampilkan User Inventory Management dan User Report Management.  Button untuk mengedit user.  Button untuk menghapus user. Button untuk assign role. | Detail dari user yang dipilih (nama, alamat, dan informasi lainnya). |
+| Assign Role Button | Memberikan peran kepada user yang terdaftar. | Popup form untuk memberikan peran kepada user yang terdaftar. | Daftar peran yang tersedia. |
+| Add User Button | Menambahkan user baru ke dalam sistem. | Popup form untuk menambahkan user baru. |  |
+| Delete User Button | Menghapus user dari sistem. | Popup konfirmasi untuk menghapus user. |  |
+
+**Tabel 4.3.**		Section Halaman User Super Admin
+
+---
+
+#### Halaman Item Management Super Admin
+
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan daftar jenis barang yang terdaftar dalam sistem.
+
+![][image2]
+
+**Gambar 4.4.**		Wireframe Halaman Item Super Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Item List | Menampilkan daftar jenis barang yang terdaftar dalam sistem. | Row dapat diklik untuk melihat detail item.  Add Item Button untuk menambahkan item baru.  Delete Item Button pada setiap row untuk menghapus item. | Daftar item yang terdaftar dalam sistem. |
+| Item Detail | Menampilkan detail dari item yang dipilih. | Button untuk berpindah ke halaman Item Inventory Management.  Button untuk mengedit item.  Button untuk menghapus item. | Detail dari item yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Item Button | Menambahkan item baru ke dalam sistem. | Popup form untuk menambahkan item baru. |  |
+| Delete Item Button | Menghapus item dari sistem. | Popup konfirmasi untuk menghapus item. |  |
+
+**Tabel 4.4.**		Section Halaman Item Super Admin
+
+#### Halaman Inventory Management Super Admin
+
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan database inventaris dari node terkait.
+
+![][image2]
+
+**Gambar 4.5.**		Wireframe Halaman Inventory Super Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Inventory List | Menampilkan database inventaris dari node terkait. | Row dapat diklik untuk melihat detail inventaris.  Add Inventory Button untuk menambahkan inventaris baru.  Delete Inventory Button pada setiap row untuk menghapus inventaris.  Transfer Inventory Button pada setiap row untuk memindahkan inventaris ke node lain. | Daftar inventaris dari node terkait. |
+| Inventory Detail | Menampilkan detail dari inventaris yang dipilih. | Button untuk berpindah ke halaman Item Management.  Button untuk menghapus inventaris.  Button untuk transfer inventaris. Button untuk resolve QR code. | Detail dari inventaris yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Inventory Button | Menambahkan inventaris baru ke dalam sistem. | Popup form untuk menambahkan inventaris baru. |  |
+| Delete Inventory Button | Menghapus inventaris dari sistem. | Popup konfirmasi untuk menghapus inventaris. |  |
+| Transfer Inventory Button | Memindahkan inventaris dari satu node ke node lain. | Popup form untuk memindahkan inventaris ke node lain. |  |
+| Resolve QR Code | Menyelesaikan pemindaian QR code yang tidak terbaca. | Button untuk menyelesaikan pemindaian QR code. |  |
+
+**Tabel 4.5.**		Section Halaman Inventory Super Admin
+
+---
+
+#### Halaman Report Management Super Admin
+
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan laporan ketidaksesuaian yang terjadi pada seluruh node.
+
+![][image2]
+
+**Gambar 4.6.**		Wireframe Halaman Report Super Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Report List | Menampilkan daftar laporan ketidaksesuaian yang terjadi pada seluruh node. | Row dapat diklik untuk melihat detail laporan.  Add Report Button untuk menambahkan laporan baru.  Resolve Report Button pada setiap row untuk menandai laporan sebagai sudah ditangani. | Daftar laporan ketidaksesuaian yang terjadi pada seluruh node. |
+| Report Detail | Menampilkan detail dari laporan yang dipilih. | Button untuk berpindah ke halaman Report Inventory Management.  Button untuk mengedit laporan. Button untuk menghapus laporan. Button untuk resolve laporan. | Detail dari laporan yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Report Button | Menambahkan laporan baru ke dalam sistem. | Popup form untuk menambahkan laporan baru. |  |
+| Resolve Report Button | Menandai laporan ketidaksesuaian sebagai sudah ditangani. | Popup konfirmasi untuk menandai laporan sebagai sudah ditangani. |  |
+
+**Tabel 4.6.**		Section Halaman Report Super Admin
+
+---
+
+#### Halaman Menu Management Super Admin
+
+* **Accessible By:** Super Admin  
+* **Description:** Menampilkan menu yang telah dibuat oleh petugas dapur pada seluruh node.
+
+![][image2]
+
+**Gambar 4.7.**		Wireframe Halaman Menu Super Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Menu List | Menampilkan menu yang telah dibuat oleh petugas dapur pada seluruh node. | Row dapat diklik untuk melihat detail menu.  Add Menu Button untuk menambahkan menu baru.  Delete Menu Button pada setiap row untuk menghapus menu.  Confirm Menu Button pada setiap row untuk mengkonfirmasi menu. | Daftar menu yang telah dibuat oleh petugas dapur pada seluruh node. |
+| Menu Detail | Menampilkan detail dari menu yang dipilih. | Button untuk berpindah ke halaman Menu Detail yang menampilkan Menu Inventory Management.  Button untuk mengedit menu.  Button untuk menghapus menu. Button untuk mengkonfirmasi menu. | Detail dari menu yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Menu Button | Menambahkan menu baru ke dalam sistem. | Popup form untuk menambahkan menu baru. |  |
+| Delete Menu Button | Menghapus menu dari sistem. | Popup konfirmasi untuk menghapus menu. |  |
+| Confirm Menu Button | Mengkonfirmasi menu yang telah dibuat oleh petugas dapur. | Popup konfirmasi untuk mengkonfirmasi menu. |  |
+
+**Tabel 4.7.**		Section Halaman Menu Super Admin
+
+### Halaman Node Admin
+
+#### Halaman Dashboard Node Admin
+
+* **Accessible By:** Semua Node Admin
+* **Description:** Menampilkan ringkasan data inventaris dari node terkait.
+
+![][image2]
+
+**Gambar 4.8.**		Wireframe Halaman Dashboard Node Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Overview | Menampilkan ringkasan data inventaris dari node terkait. | Button untuk berpindah ke halaman Inventory Management. | Data inventaris dari node terkait. |
+| Recent Reports | Menampilkan laporan ketidaksesuaian terbaru dari node terkait. | Row dapat diklik untuk melihat detail laporan.  Button untuk berpindah ke halaman Report Management. | Daftar laporan ketidaksesuaian terbaru dari node terkait. |
+| Recent Menu (Hanya untuk Assembly Node Admin) | Menampilkan menu terbaru yang telah dibuat oleh petugas dapur pada node terkait. | Row dapat diklik untuk melihat detail menu.  Button untuk berpindah ke halaman Menu Management. | Daftar menu terbaru yang telah dibuat oleh petugas dapur pada node terkait. |
+| Add New Inventory (Hanya untuk Source Node Admin) | Menambahkan inventaris baru ke dalam sistem. | Popup form untuk menambahkan inventaris baru. |  |
+
+**Tabel 4.8.**		Section Halaman Dashboard Node Admin
+
+---
+
+#### Halaman User Management Node Admin
+
+* **Accessible By:** Semua Node Admin
+* **Description:** Menampilkan daftar petugas yang terdaftar dalam sistem pada node terkait.
+
+![][image2]
+
+**Gambar 4.9.**		Wireframe Halaman User Node Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| User List | Menampilkan daftar petugas yang terdaftar dalam sistem pada node terkait. | Row dapat diklik untuk melihat detail user.  Add User Button untuk menambahkan user baru.  Delete User Button pada setiap row untuk menghapus user.  Assign Role Button pada setiap row untuk memberikan peran kepada user. | Daftar user yang terdaftar dalam sistem pada node terkait. |
+| User Detail | Menampilkan detail dari user yang dipilih. | Button untuk berpindah ke halaman User Detail yang menampilkan User Inventory Management dan User Report Management.  Button untuk mengedit user.  Button untuk menghapus user. Button untuk assign role. | Detail dari user yang dipilih (nama, alamat, dan informasi lainnya). |
+| Assign Role Button | Memberikan peran kepada user yang terdaftar. | Popup form untuk memberikan peran kepada user yang terdaftar. | Daftar peran yang tersedia. |
+| Add User Button | Menambahkan user baru ke dalam sistem. | Popup form untuk menambahkan user baru. |  |
+| Delete User Button | Menghapus user dari sistem. | Popup konfirmasi untuk menghapus user. |  |
+
+**Tabel 4.9.**		Section Halaman User Node Admin
+
+---
+
+#### Halaman Inventory Management Node Admin
+
+* **Accessible By:** Semua Node Admin
+- **Description:** Menampilkan database inventaris dari node terkait. Inventory yang ditampilkan meliputi inventory yang ada di node tersebut, inventory yang ada di node lain yang sedang dalam proses pengiriman, dan inventory yang ada di node itu yang sedang dalam proses pengiriman ke node lain.
+
+![][image2]
+
+**Gambar 4.10.**		Wireframe Halaman Inventory Node Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Inventory List | Menampilkan database inventaris dari node terkait. | Row dapat diklik untuk melihat detail inventaris.  Add Inventory Button untuk menambahkan inventaris baru.  Delete Inventory Button pada setiap row untuk menghapus inventaris.  Transfer Inventory Button pada setiap row untuk memindahkan inventaris ke node lain. | Daftar inventaris dari node terkait. |
+| Inventory Detail | Menampilkan detail dari inventaris yang dipilih. | Button untuk berpindah ke halaman Item Management.  Button untuk menghapus inventaris.  Button untuk transfer inventaris. Button untuk resolve QR code. | Detail dari inventaris yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Inventory Button | Menambahkan inventaris baru ke dalam sistem. | Popup form untuk menambahkan inventaris baru. |  |
+| Delete Inventory Button | Menghapus inventaris dari sistem. | Popup konfirmasi untuk menghapus inventaris. |  |
+| Transfer Inventory Button | Memindahkan inventaris dari satu node ke node lain. | Popup form untuk memindahkan inventaris ke node lain. |  |
+| Resolve QR Code | Menyelesaikan pemindaian QR code yang tidak terbaca. | Button untuk menyelesaikan pemindaian QR code. |  |
+
+**Tabel 4.10.**		Section Halaman Inventory Node Admin
+
+---
+
+#### Halaman Report Management Node Admin
+
+* **Accessible By:** Semua Node Admin
+* **Description:** Menampilkan laporan ketidaksesuaian yang terjadi pada node terkait.
+
+![][image2]
+
+**Gambar 4.11.**		Wireframe Halaman Report Node Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Report List | Menampilkan daftar laporan ketidaksesuaian yang terjadi pada node terkait. | Row dapat diklik untuk melihat detail laporan.  Add Report Button untuk menambahkan laporan baru.  Resolve Report Button pada setiap row untuk menandai laporan sebagai sudah ditangani. | Daftar laporan ketidaksesuaian yang terjadi pada node terkait. |
+| Report Detail | Menampilkan detail dari laporan yang dipilih. | Button untuk berpindah ke halaman Report Inventory Management.  Button untuk mengedit laporan. Button untuk menghapus laporan. Button untuk resolve laporan. | Detail dari laporan yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Report Button | Menambahkan laporan baru ke dalam sistem. | Popup form untuk menambahkan laporan baru. |  |
+| Resolve Report Button | Menandai laporan ketidaksesuaian sebagai sudah ditangani. | Popup konfirmasi untuk menandai laporan sebagai sudah ditangani. |  |
+
+**Tabel 4.11.**		Section Halaman Report Node Admin
+
+---
+
+#### Halaman Item Management Node Admin
+
+* **Accessible By:** Source Node Admin
+* **Description:** Menampilkan daftar jenis barang yang dibuat oleh admin gudang pada node terkait, item yang dibuat dapat diakses global oleh semua node. Namun, source node admin hanya dapat mengedit item yang dibuat oleh admin gudang pada node tersebut. 
+
+![][image2]
+
+**Gambar 4.12.**		Wireframe Halaman Item Node Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Item List | Menampilkan daftar jenis barang yang terdaftar dalam sistem pada node terkait. | Row dapat diklik untuk melihat detail item.  Add Item Button untuk menambahkan item baru.  Delete Item Button pada setiap row untuk menghapus item. | Daftar item yang terdaftar dalam sistem pada node terkait. |
+| Item Detail | Menampilkan detail dari item yang dipilih. | Button untuk berpindah ke halaman Item Inventory Management.  Button untuk mengedit item.  Button untuk menghapus item. | Detail dari item yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Item Button | Menambahkan item baru ke dalam sistem. | Popup form untuk menambahkan item baru. |  |
+| Delete Item Button | Menghapus item dari sistem. | Popup konfirmasi untuk menghapus item. |  |
+| Transfer Item Button | Memindahkan item dari satu node ke node lain. | Popup form untuk memindahkan item ke node lain. |  |
+
+**Tabel 4.12.**		Section Halaman Item Node Admin
+
+#### Halaman Menu Management Node Admin
+
+* **Accessible By:** Assembly Node Admin
+- **Description:** Menampilkan menu yang telah dibuat oleh petugas dapur pada node terkait. Menu yang dibuat dapat diakses oleh semua node, namun assembly node admin hanya dapat mengedit menu yang dibuat oleh petugas dapur pada node tersebut.
+
+![][image2]
+
+**Gambar 4.13.**		Wireframe Halaman Menu Node Admin
+
+| Section Name | Section Description | Section Input | Section Output |
+| :---- | :---- | :---- | :---- |
+| Menu List | Menampilkan menu yang telah dibuat oleh petugas dapur pada node terkait. | Row dapat diklik untuk melihat detail menu.  Add Menu Button untuk menambahkan menu baru.  Delete Menu Button pada setiap row untuk menghapus menu.  Confirm Menu Button pada setiap row untuk mengkonfirmasi menu. | Daftar menu yang telah dibuat oleh petugas dapur pada node terkait. |
+| Menu Detail | Menampilkan detail dari menu yang dipilih. | Button untuk berpindah ke halaman Menu Detail yang menampilkan Menu Inventory Management.  Button untuk mengedit menu.  Button untuk menghapus menu. Button untuk mengkonfirmasi menu. | Detail dari menu yang dipilih (nama, kategori, dan informasi lainnya). |
+| Add Menu Button | Menambahkan menu baru ke dalam sistem. | Popup form untuk menambahkan menu baru. |  |
+| Delete Menu Button | Menghapus menu dari sistem. | Popup konfirmasi untuk menghapus menu. |  |
+| Confirm Menu Button | Mengkonfirmasi menu yang telah dibuat oleh petugas dapur. | Popup konfirmasi untuk mengkonfirmasi menu. |  |
+
+**Tabel 4.13.**		Section Halaman Menu Node Admin
+
+---
+

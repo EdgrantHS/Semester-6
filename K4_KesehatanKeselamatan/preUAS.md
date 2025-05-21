@@ -77,7 +77,6 @@ Contoh:
   - TLV-TWA: Threshold Limit Value, time weighted average (ppm)
 - PEL: Permissible Exposure Limit: batas paparan maksimum yang diperbolehkan oleh OSHA
 
-
 > - TLV adalah pedoman dalam pengendalian Health Hazard
 > - TLV tidak bisa digunakan sebagai angka pasti antara kondisi aman dan bahaya
 > - TLV tidak boleh digunakan sebagai standard legal
@@ -132,7 +131,7 @@ Objective: Find ways to make repetitive jobs easier and safer, and to reduce the
 
 > [!IMPORTANT]
 > Tugas Kelompok Audit
-> 
+>
 > ```plaintext
 > UAS: 2 juni
 > 19Mei / 26 Mei, presentasi hasil audit
@@ -140,3 +139,13 @@ Objective: Find ways to make repetitive jobs easier and safer, and to reduce the
 > ```
 >
 > Berdasarkan SMK3
+
+## Week b4
+
+- OFI: Opportunity for Improvement (Kesalahan)
+- Hazard Canyon: tempat bahaya, perlu "jembatan" untuk menghindari bahaya
+  - Dimulai dari dasar jembatan:
+  - Kerangka:
+  - PSM: Process Safety Management
+- Safety Audit: Cek sistem K3
+- Safety Inspection: Cek alat dan kondisi kerja

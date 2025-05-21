@@ -27,3 +27,4 @@
   - Quality of service (QoS) not supported
 
 > Wifi juga mendukung PCF (Point Coordination Function): DCF berbasis rebuntan, PCF berbasis reservasi
+

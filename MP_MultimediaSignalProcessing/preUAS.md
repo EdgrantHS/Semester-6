@@ -92,3 +92,48 @@ Dilasi
 - Hough Transform: Mencari garis dalam citra dengan mengubah koordinat piksel ke ruang parameter
 
 ### Edge Detection
+
+## Image Recognition (Week b6)
+
+### Segmentation
+
+Edge based segmentation
+
+- Sobel
+- Canny
+- Canny
+
+Region based segmentation
+
+- Watershed: Region growing, region merging, region splitting
+
+### Representation & Descriptor
+
+Objek yang sudah disegmentasi ingin dikenali, maka perlu representasi dan deskriptor
+
+Representation: bagaimana objek yang sudah segmented dijelaskan secara external maupun internal
+
+- Internal (Terkait dengan bagian dalam objek): Area, perimeter, circularity, color, texture - Regional Properties
+- External (Terkait dengan bagian luar objek): Edge, boundary, region - Shape/Silhouette based
+
+Descriptor: description of the represented region
+
+- Internal (Terkait dengan bagian dalam objek): Area, perimeter, circularity, color, texture - Regional Properties
+- External (Terkait dengan bagian luar objek): Edge, boundary, region - Shape/Silhouette based
+
+> Representation: Key (contoh: pixel)
+> Descriptor: Value (contoh: amount of pixel)
+
+Thresholding: Menggunakan threshold pada Descriptor untuk menentukan apakah objek tersebut ada atau tidak (Contoh, circularity > 0.5 untuk menentukan apakah objek tersebut bulat atau tidak)
+
+### Object Recognition Outline
+
+Quantitative (decision function)
+
+- Minimum distance classifier
+- Matching by Correlation
+- Optimal Subspace Projection
+
+Qualitative (decision tree)
+
+
